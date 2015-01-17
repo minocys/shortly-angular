@@ -1,10 +1,10 @@
 <div id='container'>
 <!-- Your code here -->
-  <form ng-submit="addLink(newLink)" novalidate>
+  <form name="shortlyForm" ng-submit="add()" novalidate>
       <input name="link" type="url" ng-model="link.url" placeholder="http://linkexample.com" required ng-class="{ 'error': shortlyForm.$invalid && shortlyForm.$dirty }" />
       <input type='submit' value='Shorten'>
   </form>
-  <img class='spinner' src='../../assets/spiffygif_46x46.gif'>
+  <!-- <img class='spinner' src='../../assets/spiffygif_46x46.gif'> -->
 
   <div ng-if="shortlyForm.link.$error.required && shortlyForm.$dirty" class="message">
     <h2>Enter a URL</h2>
